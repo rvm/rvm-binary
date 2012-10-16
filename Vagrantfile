@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'yaml'
 
 distributions = YAML::load_file('distributions.yml')
