@@ -23,15 +23,15 @@ if ( targets - distributions.keys ).length > 0
 end
 
 puts "### halting all"
-system "vagrant halt"
+system "vagrant halt || vagrant halt --force"
 
 targets.each do |target|
   puts "#### starting #{target}"
   system "vagrant up #{target}"
-  system "vagrant halt #{target}"
+  system "vagrant halt #{target} || vagrant halt --force #{target}"
   puts "#### stopping #{target}"
 end
 
 puts "### halting all"
-system "vagrant halt"
+system "vagrant halt || vagrant halt --force"
 puts "### haled all"
