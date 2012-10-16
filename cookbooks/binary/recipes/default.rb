@@ -22,7 +22,7 @@ end
 node[:rvm][:binary][:versions].each do |version|
   bash "uninstall #{version}" do
     code "/usr/local/rvm/bin/rvm uninstall #{version}"
-    only_if { "rvm use #{version}" }
+    only_if "rvm use #{version}"
   end
   bash "install #{version}" do
     code "/usr/local/rvm/bin/rvm install #{version} --movable"
