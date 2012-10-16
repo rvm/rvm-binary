@@ -13,6 +13,9 @@ Vagrant::Config.run do |global_config|
         "--cpus", "2",
         "--ioapic", "on",
       ]
+      config.vm.provision :shell do |shell|
+        shell.inline = "which chef-client >/dev/null 2>&1 || sudo gem install chef --no-ri --no-rdoc --no-user-install"
+      end
       config.vm.provision :chef_solo do |chef|
         chef.cookbooks_path = "cookbooks"
         chef.add_recipe "binary"
