@@ -9,7 +9,7 @@
 
 class Chef::Resource::Script
   def log_code command
-    if node[:rvm][:debug]
+    if Chef::Config[:log_level] == :debug
       code "{ #{command}; } 2>&1 | tee /var/log/#{@command.to_s.gsub(/ /,"_")}.log"
     else
       code command
@@ -23,7 +23,7 @@ bash "install #{node["platform"]} requirements" do
     node[:rvm][:requirements][ node["platform_family"] ] ||
     node[:rvm][:requirements][ node["os"]              ]
   ].flatten * " && "
-  if node[:rvm][:debug]
+  if Chef::Config[:log_level] == :debug
     puts "--- type: #{ node["platform"] } / #{ node["platform_family"] } / #{ node["os"] }"
     puts "--- requirements: #{ reqs }"
   end
