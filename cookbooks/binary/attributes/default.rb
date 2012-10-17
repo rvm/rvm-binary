@@ -9,8 +9,11 @@ default[:rvm][:requirements][:gentoo] = [
 default[:rvm][:requirements][:arch] = [
   "sudo pacman -Sy --noconfirm gcc patch curl zlib readline libxml2 libxslt git autoconf automake diffutils make libtool bison subversion"
 ]
-default[:rvm][:requirements][:rhel] = [
+default[:rvm][:requirements][:centos] = [
   "curl -L http://curl.haxx.se/ca/cacert.pem -o /etc/pki/tls/certs/ca-bundle.crt",
+  "yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel"
+]
+default[:rvm][:requirements][:rhel] = [
   "yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel"
 ]
 default[:rvm][:requirements][:fedora] = [
