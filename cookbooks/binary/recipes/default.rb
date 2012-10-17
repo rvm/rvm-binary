@@ -12,7 +12,7 @@ bash "install #{node["platform"]} requirements" do
     node[:rvm][:requirements][ node["platform"]        ] ||
     node[:rvm][:requirements][ node["platform_family"] ] ||
     node[:rvm][:requirements][ node["os"]              ]
-  ].flatten * "; "
+  ].flatten * " && "
 end
 
 bash "install rvm" do
