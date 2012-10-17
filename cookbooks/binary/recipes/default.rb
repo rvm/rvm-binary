@@ -7,8 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-def extra_log(name)
-  "2>&1 | tee /var/log/#{name}.log" if node[:rvm][:debug]
+class Chef::Resource::Bash
+  def extra_log(name)
+    "2>&1 | tee /var/log/#{name}.log" if node[:rvm][:debug]
+  end
 end
 
 bash "install #{node["platform"]} requirements" do
