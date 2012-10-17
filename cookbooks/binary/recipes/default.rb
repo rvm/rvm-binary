@@ -7,6 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
+def extra_log(name)
+  "2>&1 | tee /var/log/#{name}.log" if node[:rvm][:debug]
+end
+
 bash "install #{node["platform"]} requirements" do
   code [
     node[:rvm][:requirements][ node["platform"]        ] ||
@@ -16,7 +20,7 @@ bash "install #{node["platform"]} requirements" do
 end
 
 bash "install rvm" do
-  code "curl -L https://get.rvm.io | bash -s -- --auto"
+  code "curl -L https://get.rvm.io | bash -s -- --auto #{extra_log("rvm-install")}"
 end
 
 node[:rvm][:binary][:versions].each do |version|
@@ -25,10 +29,10 @@ node[:rvm][:binary][:versions].each do |version|
     only_if "/usr/local/rvm/bin/rvm use #{version}"
   end
   bash "install #{version}" do
-    code "/usr/local/rvm/bin/rvm install #{version} --movable"
+    code "/usr/local/rvm/bin/rvm install #{version} --movable #{extra_log("rvm-install")}"
   end
   bash "package #{version}" do
     cwd "/vagrant"
-    code "/usr/local/rvm/bin/rvm prepare #{version} --path"
+    code "/usr/local/rvm/bin/rvm prepare #{version} --path #{extra_log("rvm-install")}"
   end
 end
