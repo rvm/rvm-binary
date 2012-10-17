@@ -12,6 +12,7 @@ Automation of building binary rubies for RVM.
 - `./run list` - List available images
 - `./run <image>` - Run single image build
 - `./run [all]` - Run build on all images, one by one
+- `./run binaries` - List all build rubies
 
 ## Output
 

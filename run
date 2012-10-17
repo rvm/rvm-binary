@@ -12,6 +12,9 @@ elsif %w( help --help -h ).include? ARGV[0]
 elsif %w( list --list -l ).include? ARGV[0]
   puts distributions.keys
   exit
+elsif %w( binaries --binaries -b ).include? ARGV[0]
+  system "find binaries/ -type f | sort"
+  exit
 else
   targets = ARGV
 end
