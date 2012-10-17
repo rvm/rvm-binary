@@ -1,3 +1,4 @@
 binaries
 .vagrant
 Gemfile.lock
+log/
