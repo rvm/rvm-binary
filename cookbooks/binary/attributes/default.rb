@@ -17,7 +17,8 @@ default[:rvm][:requirements][:fedora] = [
   "sudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel"
 ]
 default[:rvm][:requirements][:suse] = [
-  "sudo zypper install -y patterns-openSUSE-devel_basis gcc-c++ bzip2 readline-devel zlib-devel libxml2-devel libxslt-devel libyaml-devel libopenssl-devel libffi45-devel libtool bison"
+  "sudo hostname localhost",
+  "sudo zypper install -y patterns-openSUSE-devel_basis gcc-c++ bzip2 readline-devel zlib-devel libxml2-devel libxslt-devel libyaml-devel libopenssl-devel libffi-devel libtool bison"
 ]
 default[:rvm][:requirements][:freebsd] = [
   "sudo pkg_add gcc curl readline libxml2 libxslt git autoconf automake diffutils make libtool bison subversion"
