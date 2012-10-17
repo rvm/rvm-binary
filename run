@@ -22,8 +22,13 @@ if ( targets - distributions.keys ).length > 0
   exit 1
 end
 
-puts "### halting all"
-system "vagrant halt || vagrant halt --force"
+if targets.length == 1
+  puts "#### halting #{target}"
+  system "vagrant halt #{target} || vagrant halt --force #{target}"
+elsif targets.length > 1
+  puts "### halting all"
+  system "vagrant halt || vagrant halt --force"
+end
 
 Dir.mkdir "log/"
 
@@ -35,6 +40,8 @@ targets.each do |target|
   puts "#### stopping #{target}"
 end
 
-puts "### halting all"
-system "vagrant halt || vagrant halt --force"
-puts "### haled all"
+if targets.length > 1
+  puts "### halting all"
+  system "vagrant halt || vagrant halt --force"
+  puts "### halted all"
+end
