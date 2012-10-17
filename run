@@ -30,7 +30,7 @@ elsif targets.length > 1
   system "vagrant halt || vagrant halt --force"
 end
 
-Dir.mkdir "log/"
+Dir.mkdir "log/" unless Dir.exist? "log/"
 
 targets.each do |target|
   puts "#### starting #{target}"
