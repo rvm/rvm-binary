@@ -7,4 +7,5 @@ debian_wheezy_sid_64bit: https://github.com/downloads/stefancocora/freedombox_de
 opensuse_121_64bit: https://s3.amazonaws.com/circlejtp/OpenSuseVagrant/OpenSuse12_1x64_July14.box
 ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
 ubuntu_1110_64bit_oneiric: http://images.ansolabs.com/vagrant/oneiric64.box
+ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
 ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
