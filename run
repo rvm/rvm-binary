@@ -26,8 +26,8 @@ if ( targets - distributions.keys ).length > 0
 end
 
 if targets.length == 1
-  puts "#### halting #{target}"
-  system "vagrant halt #{target} || vagrant halt --force #{target}"
+  puts "#### halting #{targets[0]}"
+  system "vagrant halt #{targets[0]} || vagrant halt --force #{targets[0]}"
 elsif targets.length > 1
   puts "### halting all"
   system "vagrant halt || vagrant halt --force"
@@ -37,10 +37,10 @@ Dir.mkdir "log/" unless Dir.exist? "log/"
 
 targets.each do |target|
   puts "#### starting #{target}"
-  File.delete "log/#{target}.log"
+  File.delete "log/#{target}.log" if File.exist?("log/#{target}.log")
   system "vagrant up #{target} 2>&1 | tee log/#{target}.log"
-  system "vagrant halt #{target} 2>/dev/null || vagrant halt --force #{target}"
   puts "#### stopping #{target}"
+  system "vagrant halt #{target} 2>/dev/null || vagrant halt --force #{target}"
 end
 
 if targets.length > 1
