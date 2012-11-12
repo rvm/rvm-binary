@@ -5,6 +5,7 @@ centos_603_64bit: https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-min
 debian_603_64bit_squeeze: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
 debian_wheezy_sid_64bit: https://github.com/downloads/stefancocora/freedombox_dev/freedombox_x64-1.0.box
 opensuse_121_64bit: https://s3.amazonaws.com/circlejtp/OpenSuseVagrant/OpenSuse12_1x64_July14.box
+ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
 ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
 ubuntu_1110_64bit_oneiric: http://images.ansolabs.com/vagrant/oneiric64.box
 ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
