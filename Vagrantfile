@@ -17,6 +17,7 @@ Vagrant::Config.run do |global_config|
       ]
       config.vm.provision :shell do |shell|
         shell.inline = <<-EOF
+          [[ -s /etc/gemrc ]] && grep -- '--user-install' /etc/gemrc >/dev/null && sudo sed -i'' -- '/--user-install/ d' /etc/gemrc ;
           which chef-client >/dev/null 2>&1 || sudo gem install chef --no-ri --no-rdoc --no-user-install
         EOF
       end
