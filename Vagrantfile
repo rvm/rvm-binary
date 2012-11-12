@@ -24,6 +24,15 @@ Vagrant::Config.run do |global_config|
         chef.cookbooks_path = "cookbooks"
         chef.add_recipe "binary"
         chef.log_level = :debug
+        if ENV.has_key?("RUBY_VERSIONS")
+          chef.json = {
+            :rvm => {
+              :binary => {
+                :versions => ENV["RUBY_VERSIONS"].split(/ /)
+              }
+            }
+          }
+        end
       end
     end
   end
