@@ -1,4 +1,4 @@
-default[:rvm][:binary][:versions] = %W( ruby-1.9.3-p194 ruby-1.9.3-p286 )
+default[:rvm][:binary][:versions] = %W( ruby-1.9.3-p194 ruby-1.9.3-p286 ruby-1.9.3-p327 )
 default[:rvm][:requirements][:ubuntu] =
 default[:rvm][:requirements][:debian] = [
   "sudo apt-get --quiet --yes update",
