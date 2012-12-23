@@ -36,10 +36,21 @@ bash "install rvm" do
     cwd "/vagrant/rvm-src"
     log_code "./install --auto-dotfiles"
   else
-    puts "rvm-src not found falling back to download"
+    $stderr.puts "rvm-src not found falling back to download"
     log_code "curl -L https://get.rvm.io | bash -s -- --auto-dotfiles"
   end
 end
+
+%w( archives repos ).each do |type|
+  if File.directory? "/vagrant/rvm-#{type}"
+    bash "link rvm #{type}" do
+      log_code "rm -rf /usr/local/rvm/#{type} && ln -s /vagrant/rvm-#{type}/ /usr/local/rvm/#{type} "
+    end
+  else
+    $stderr.puts "rvm-#{type} missing, shared #{type} disabled"
+  end
+end
+
 
 node[:rvm][:binary][:versions].each do |version|
   bash "uninstall #{version}" do

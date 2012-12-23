@@ -1,5 +1,5 @@
 binaries
-rvm-src
+rvm-*
 .vagrant
 Gemfile.lock
 log/
