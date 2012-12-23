@@ -10,7 +10,8 @@
 class Chef::Resource::Script
   def log_code command
     if Chef::Config[:log_level] == :debug
-      code "{ #{command}; } 2>&1 | tee /var/log/#{@command.to_s.gsub(/ /,"_")}.log; exit ${PIPESTATUS[0]}"
+      code "{ #{command}; _ret=$?; echo \"Exit status was $_ret.\"; exit $_ret; } 2>&1 |
+        tee /var/log/#{@command.to_s.gsub(/ /,"_")}.log; exit ${PIPESTATUS[0]}"
     else
       code command
     end
