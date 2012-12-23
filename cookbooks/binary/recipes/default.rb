@@ -31,7 +31,13 @@ bash "install #{node["platform"]} requirements" do
 end
 
 bash "install rvm" do
-  log_code "curl -L https://get.rvm.io | bash -s -- --auto"
+  if File.directory? "/vagrant/rvm-src"
+    cwd "/vagrant/rvm-src"
+    log_code "./install --auto-dotfiles"
+  else
+    puts "rvm-src not found falling back to download"
+    log_code "curl -L https://get.rvm.io | bash -s -- --auto-dotfiles"
+  end
 end
 
 node[:rvm][:binary][:versions].each do |version|
