@@ -10,3 +10,4 @@ ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
 ubuntu_1110_64bit_oneiric: http://images.ansolabs.com/vagrant/oneiric64.box
 ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
 ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
+ubuntu_1210_64bit_quantal: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
