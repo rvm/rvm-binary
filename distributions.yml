@@ -1,7 +1,6 @@
 ---
 arch_20120702_64bit: http://vagrant.pouss.in/archlinux_2012-07-02.box
 centos_56_64bit: http://dl.dropbox.com/u/9227672/centos-5.6-x86_64-netinstall-4.1.6.box
-centos_603_64bit: https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box
 debian_603_64bit_squeeze: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
 debian_wheezy_sid_64bit: https://github.com/downloads/stefancocora/freedombox_dev/freedombox_x64-1.0.box
 opensuse_121_64bit: https://s3.amazonaws.com/circlejtp/OpenSuseVagrant/OpenSuse12_1x64_July14.box
