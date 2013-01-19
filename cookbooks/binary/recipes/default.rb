@@ -18,26 +18,30 @@ class Chef::Resource::Script
   end
 end
 
-bash "install #{node["platform"]} requirements" do
-  reqs = [
-    node[:rvm][:requirements][ node["platform"]        ] ||
-    node[:rvm][:requirements][ node["platform_family"] ] ||
-    node[:rvm][:requirements][ node["os"]              ]
-  ].flatten * " && "
-  if Chef::Config[:log_level] == :debug
-    puts "--- type: #{ node["platform"] } / #{ node["platform_family"] } / #{ node["os"] }"
-    puts "--- requirements: #{ reqs }"
+reqs = [
+  node[:rvm][:requirements][ node["platform"]        ] ||
+  node[:rvm][:requirements][ node["platform_family"] ] ||
+  node[:rvm][:requirements][ node["os"]              ]
+].flatten * " && "
+unless reqs.empty?
+  bash "install #{node["platform"]} requirements" do
+    if Chef::Config[:log_level] == :debug
+      puts "--- type: #{ node["platform"] } / #{ node["platform_family"] } / #{ node["os"] }"
+      puts "--- requirements: '#{reqs}'"
+    end
+    log_code reqs
   end
-  log_code reqs
 end
 
+installer_options="--auto-dotfiles"
+rvm_command="/usr/local/rvm/bin/rvmsudo /usr/local/rvm/bin/rvm"
 bash "install rvm" do
   if File.directory? "/vagrant/rvm-src"
     cwd "/vagrant/rvm-src"
-    log_code "./install --auto-dotfiles"
+    log_code "./install #{installer_options}"
   else
     $stderr.puts "rvm-src not found falling back to download"
-    log_code "curl -L https://get.rvm.io | bash -s -- --auto-dotfiles"
+    log_code "curl -L https://get.rvm.io | bash -s -- #{installer_options}"
   end
 end
 
@@ -51,17 +55,20 @@ end
   end
 end
 
+bash "install rvm requirements" do
+  log_code "#{rvm_command} requirements run force"
+end
 
 node[:rvm][:binary][:versions].each do |version|
   bash "uninstall #{version}" do
-    log_code "/usr/local/rvm/bin/rvm uninstall #{version}"
-    only_if "/usr/local/rvm/bin/rvm use #{version}"
+    log_code "#{rvm_command} uninstall #{version}"
+    only_if "#{rvm_command} use #{version}"
   end
   bash "install #{version}" do
-    log_code "/usr/local/rvm/bin/rvm install #{version} --movable"
+    log_code "#{rvm_command} install #{version} --movable"
   end
   bash "package #{version}" do
     cwd "/vagrant"
-    log_code "/usr/local/rvm/bin/rvm prepare #{version} --path"
+    log_code "#{rvm_command} prepare #{version} --path"
   end
 end
