@@ -7,13 +7,16 @@ distributions = YAML::load_file('distributions.yml')
 if ARGV.nil? || ARGV.length == 0 || ARGV[0] == "all"
   targets = distributions.keys
 elsif %w( help --help -h ).include? ARGV[0]
-  puts "Usage: ./run [help|list|<image>]"
+  puts "Usage: ./run [help|list|<image>|binaries|upload]"
   exit
 elsif %w( list --list -l ).include? ARGV[0]
   puts distributions.keys
   exit
 elsif %w( binaries --binaries -b ).include? ARGV[0]
   system "find binaries/ -type f | sort"
+  exit
+elsif %w( upload --upload -u ).include? ARGV[0]
+  system "rsync -av --rsh=ssh --progress binaries/ rvm@rvm.io:~/shared/public/binaries/"
   exit
 else
   targets = ARGV
