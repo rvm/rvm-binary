@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 1.9.3
+before_script:
+  - git submodule update
+script: "./run $"
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#rvm-test"
+  email:
+    recipients:
+      - mpapis@gmail.com
+    on_failure: change
