@@ -24,6 +24,8 @@ Vagrant::Config.run do |global_config|
         EOF
       end
       config.vm.provision :chef_solo do |chef|
+        chef.add_recipe "apt"
+        chef.add_recipe "java"
         chef.add_recipe "rvm-binary"
         chef.log_level = :debug
         if ENV.has_key?("RUBY_VERSIONS")

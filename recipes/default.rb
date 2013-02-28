@@ -18,6 +18,10 @@ class Chef::Resource::Script
   end
 end
 
+package "patch"
+package "build-essential"
+package "git-core"
+
 reqs = [
   node[:rvm][:requirements][ node["platform"]        ] ||
   node[:rvm][:requirements][ node["platform_family"] ] ||
