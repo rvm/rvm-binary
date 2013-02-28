@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
+require 'berkshelf/vagrant'
 
 distributions = YAML::load_file('distributions.yml')
 
@@ -23,8 +24,7 @@ Vagrant::Config.run do |global_config|
         EOF
       end
       config.vm.provision :chef_solo do |chef|
-        chef.cookbooks_path = "cookbooks"
-        chef.add_recipe "binary"
+        chef.add_recipe "rvm-binary"
         chef.log_level = :debug
         if ENV.has_key?("RUBY_VERSIONS")
           chef.json = {

@@ -4,3 +4,4 @@ source "https://rubygems.org"
 
 #gem "chef"
 gem "vagrant"
+gem "berkshelf"
