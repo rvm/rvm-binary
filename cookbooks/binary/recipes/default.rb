@@ -55,18 +55,16 @@ end
   end
 end
 
-bash "install rvm requirements" do
-  log_code "#{rvm_command} requirements run force"
-end
-
 node[:rvm][:binary][:versions].each do |version|
   bash "uninstall #{version}" do
     log_code "#{rvm_command} uninstall #{version}"
     only_if "#{rvm_command} use #{version}"
   end
+
   bash "install #{version}" do
-    log_code "#{rvm_command} install #{version} --movable"
+    log_code "#{rvm_command} install #{version} --movable --autolibs=4"
   end
+
   bash "package #{version}" do
     cwd "/vagrant"
     log_code "#{rvm_command} prepare #{version} --path"
