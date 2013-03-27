@@ -1,6 +1,3 @@
 source "https://rubygems.org"
 
-#ruby=1.9.3-p194
-
-#gem "chef"
-gem "vagrant"
+gem "vagrant", ">= 1.1", :git => "git://github.com/mitchellh/vagrant.git"
