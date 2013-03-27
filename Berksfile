@@ -1,3 +1,3 @@
 site :opscode
 
-metadata
+metadata :path => "."
