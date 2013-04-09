@@ -4,8 +4,7 @@ Automation of building binary rubies for RVM.
 
 ## Initialization
 
-    rvm use 1.9.3
-    bundle install
+Install vagrant from http://downloads.vagrantup.com/
 
 ## Invocation
 
