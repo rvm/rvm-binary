@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 
+# Opensuse
 if
-  ! [[ -f /etc/centos-release ]] ||
-  ! GREP_OPTIONS="" \grep "root.*NOPASSWD" /etc/sudoers >/dev/null
+  [[ -f /etc/os-release ]] &&
+  GREP_OPTIONS="" \grep "ID=opensuse" /etc/os-release >/dev/null
 then
-  echo "root    ALL=(ALL)   NOPASSWD: ALL" >> /etc/sudoers
+  sudo sed -i'' '/^127.0.0.1[[:space:]]*localhost$/ s/$/ '"$(hostname)"'/' /etc/hosts
 fi
 
-[[ -s /etc/gemrc ]] && grep -- '--user-install' /etc/gemrc >/dev/null && sudo sed -i'' -- '/--user-install/ d' /etc/gemrc || true
+# Ubuntu
+if
+  which apt-get >/dev/null 2>&1
+then
+  sudo apt-get --quiet --yes update
+  sudo apt-get --no-install-recommends --quiet --yes install bash curl
+fi
 
-which chef-client >/dev/null 2>&1 || sudo gem install chef --no-ri --no-rdoc --no-user-install || true
+# Arch
+[[ -s /etc/gemrc ]] && grep -- '--user-install' /etc/gemrc >/dev/null && sudo sed -i'' -- '/--user-install/ d' /etc/gemrc
 
-sudo sed -i'' '/^127.0.0.1[[:space:]]*localhost$/ s/$/ '"$(hostname)"'/' /etc/hosts || true
+true

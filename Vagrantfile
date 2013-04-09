@@ -2,7 +2,9 @@
 
 require 'yaml'
 
-distributions = YAML::load_file('distributions.yml')
+configuration = YAML::load_file('config.yml')
+binaries = ENV.has_key?("RUBY_VERSIONS") ? ENV["RUBY_VERSIONS"].split(/ /) : configuration["binaries"]
+distributions = configuration["distributions"]
 
 Vagrant.configure("2") do |config|
   distributions.each do |name, url|
@@ -22,19 +24,8 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision :shell, :path => "setup-vm.sh"
-
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "cookbooks"
-    chef.add_recipe "binary"
-    chef.log_level = :debug
-    if ENV.has_key?("RUBY_VERSIONS")
-      chef.json = {
-        :rvm => {
-          :binary => {
-            :versions => ENV["RUBY_VERSIONS"].split(/ /)
-          }
-        }
-      }
-    end
+  config.vm.provision :shell, :path => "install-rvm.sh"
+  binaries.each do |binary|
+    config.vm.provision :shell, :path => "install-ruby.sh", :args => binary
   end
 end

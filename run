@@ -2,7 +2,7 @@
 
 require 'yaml'
 
-distributions = YAML::load_file('distributions.yml')
+distributions = YAML::load_file('config.yml')["distributions"]
 
 if ARGV.nil? || ARGV.length == 0 || ARGV[0] == "all"
   targets = distributions.keys
