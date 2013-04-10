@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PATH="/usr/local/rvm/bin:$PATH"
+export PATH="/usr/local/rvm/bin:$PATH"
+export rvmsudo_secure_path=1
 
 cd /vagrant
 
