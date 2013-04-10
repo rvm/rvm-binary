@@ -4,6 +4,7 @@ PATH="/usr/local/rvm/bin:$PATH"
 
 cd /vagrant
 
-rvmsudo rvm uninstall "$1" --gems  &&
-rvmsudo rvm install   "$1" --movable --autolibs=4 &&
-rvmsudo rvm prepare   "$1" --path
+rvm uninstall --gems "$1" &&
+rvmsudo rvm   --autolibs=4 requirements "$1" &&
+rvm --movable --autolibs=1 install      "$1" &&
+rvm prepare   --path "$1"
