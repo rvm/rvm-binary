@@ -3,8 +3,7 @@ binaries:
   - ruby-1.9.3-p392
   - ruby-2.0.0-p0
 distributions:
-  arch_20120702_64bit: http://vagrant.pouss.in/archlinux_2012-07-02.box
-  centos_56_64bit: http://dl.dropbox.com/u/9227672/centos-5.6-x86_64-netinstall-4.1.6.box
+  centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_63_64bit: https://s3.amazonaws.com/itmat-public/centos-6.3-chef-10.14.2.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
   debian_603_64bit_squeeze: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
@@ -12,7 +11,7 @@ distributions:
   opensuse_121_64bit: https://s3.amazonaws.com/circlejtp/OpenSuseVagrant/OpenSuse12_1x64_July14.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
-  ubuntu_1110_64bit_oneiric: http://images.ansolabs.com/vagrant/oneiric64.box
   ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
   ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
   ubuntu_1210_64bit_quantal: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
+  ubuntu_1304_64bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box
