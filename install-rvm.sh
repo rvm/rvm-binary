@@ -6,10 +6,11 @@ if
   [[ -d "/vagrant/rvm-src" ]]
 then
   cd "/vagrant/rvm-src"
-  sudo ./install "${installer_options}"
+  ./install "${installer_options}"
+  echo "source" > /usr/local/rvm/RELEASE
 else
   echo "rvm-src not found falling back to download" >&2
-  curl -L https://get.rvm.io | sudo bash -s -- "${installer_options}"
+  curl -L https://get.rvm.io | bash -s -- "${installer_options}"
 fi
 
 for type in archives repos
