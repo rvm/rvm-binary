@@ -12,6 +12,7 @@ distributions:
   ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
   ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
   ubuntu_1210_64bit_quantal: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
+  ubuntu_1304_32bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-i386-vagrant-disk1.box
   ubuntu_1304_64bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box
 distros:
     centos_59: 'http://puppet-vagrant-boxes.puppetlabs.com/centos-59-x64-vbox4210-nocm.box'
