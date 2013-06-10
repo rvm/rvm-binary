@@ -6,6 +6,7 @@ distributions:
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
   debian_603_64bit_squeeze: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
   debian_60_32bit_squeeze: https://dl.dropbox.com/u/2289657/squeeze32-vanilla.box
+  debian_70_64bit_wheezy: https://rvm.io/vboxes/debian-7.0-amd64-netboot.box
   fedora_18_64bit: http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
