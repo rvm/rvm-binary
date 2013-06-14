@@ -9,6 +9,7 @@ distributions:
   debian_70_32bit_wheezy: https://rvm.io/vboxes/debian-7.0-i386-netboot.box
   debian_70_64bit_wheezy: https://rvm.io/vboxes/debian-7.0-amd64-netboot.box
   fedora_18_64bit: http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210.box
+  opensuse_123_64bit: https://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
   ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
