@@ -8,9 +8,10 @@ distributions = configuration["distributions"]
 
 Vagrant.configure("2") do |config|
   distributions.each do |name, url|
-    config.vm.define name.to_sym do |config|
-      config.vm.box = name
-      config.vm.box_url = url
+    config.vm.define name.to_sym do |definition|
+      definition.vm.box = name
+      definition.vm.box_url = url
+      definition.vm.provider(:virtualbox) {|vb| vb.name = name.tr('_', '-')}
     end
   end
 
