@@ -21,6 +21,17 @@ It is possible to define which ruby should be build:
 
 Output of the build will be available in `binaries/` folder.
 
+## Ruby versions
+
+Only MRI 1.9.3-p125+ is supported:
+
+- rubinius provides binaries here: http://binaries.rubini.us/
+- jruby provides binaries here: http://jruby.org.s3.amazonaws.com/
+- ree is based on 1.8.7 so it is not supported
+
+That said - feel free to build any binary ruby for yourself, just be careful publishing it,
+make sure to include information in what path it should be installed (relevant for MRI 1.8.7 / REE).
+
 ## Optimization
 
 ### RVM installation
