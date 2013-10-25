@@ -31,4 +31,7 @@ then
   sed -E -i'' -e 's/(Defaults\s+requiretty)/#\1/' /etc/sudoers
 fi
 
+groups vagrant | grep rvm >/dev/null ||
+  /usr/sbin/usermod -a -G rvm vagrant
+
 true
