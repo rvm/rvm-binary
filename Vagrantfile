@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
       "--cpus", "2",
       "--ioapic", "on",
     ]
+    # vb.gui = true
   end
 
   config.vm.provision :shell, :path => "setup-vm.sh"
