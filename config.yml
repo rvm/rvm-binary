@@ -4,8 +4,6 @@ binaries:
 distributions:
   centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
-  debian_603_64bit_squeeze: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
-  debian_60_32bit_squeeze: https://dl.dropbox.com/u/2289657/squeeze32-vanilla.box
   debian_70_32bit_wheezy: https://rvm.io/vboxes/debian-7.0-i386-netboot.box
   debian_70_64bit_wheezy: https://rvm.io/vboxes/debian-7.0-amd64-netboot.box
   fedora_18_64bit: http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210.box
@@ -18,3 +16,12 @@ distributions:
   ubuntu_1210_64bit_quantal: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
   ubuntu_1304_32bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-i386-vagrant-disk1.box
   ubuntu_1304_64bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box
+release_links:
+  centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
+  debian: http://www.debian.org/releases/
+  fedora: https://fedoraproject.org/wiki/Releases
+  opensuse: http://en.opensuse.org/Lifetime
+  ubuntu: http://releases.ubuntu.com/
+image_links:
+  - http://www.vagrantbox.es/
+  - https://rvm.io/vboxes/
