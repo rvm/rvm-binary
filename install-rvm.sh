@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-installer_options="--auto-dotfiles"
+installer_options=( --auto-dotfiles --path /usr/local/rvm )
 
 if
   [[ -d "/vagrant/rvm-src" ]]
 then
   cd "/vagrant/rvm-src"
-  ./install "${installer_options}"
+  ./install "${installer_options[@]}"
   echo "source" > /usr/local/rvm/RELEASE
 else
   echo "rvm-src not found falling back to download" >&2
-  curl -L https://get.rvm.io | bash -s -- "${installer_options}"
+  curl -L https://get.rvm.io | bash -s -- "${installer_options[@]}"
 fi
 
 for type in archives repos
