@@ -13,13 +13,16 @@ else
   curl -L https://get.rvm.io | bash -s -- "${installer_options[@]}"
 fi
 
-for type in archives repos
+/usr/local/rvm/bin/rvm gemset globalcache enable
+
+for type in archives repos gems/cache
 do
   if
-    [[ -d /vagrant/rvm-${type} ]]
+    [[ -d /vagrant/rvm-${type//\//-} ]]
   then
+    mkdir -p /usr/local/rvm/${type%/*} &&
     rm -rf /usr/local/rvm/${type} &&
-    ln -s /vagrant/rvm-${type}/ /usr/local/rvm/${type}
+    ln -s /vagrant/rvm-${type//\//-}/ /usr/local/rvm/${type}
   else
     echo "rvm-${type} missing, shared ${type} disabled" >&2
   fi
