@@ -30,4 +30,5 @@ Vagrant.configure("2") do |config|
   binaries.each do |binary|
     config.vm.provision :shell, :path => "install-ruby.sh", :args => binary
   end
+  config.vm.provision :shell, :path => "cleanup-rubies.sh"
 end
