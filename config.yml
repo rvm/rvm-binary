@@ -1,6 +1,6 @@
 binaries:
-  - ruby-1.9.3-p484
   - ruby-2.0.0-p353
+  - ruby-2.1.0
 distributions:
   centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
@@ -26,3 +26,4 @@ release_links:
 image_links:
   - http://www.vagrantbox.es/
   - https://rvm.io/vboxes/
+  - http://cloud-images.ubuntu.com/vagrant/
