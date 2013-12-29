@@ -4,7 +4,7 @@ Automation of building binary rubies for RVM.
 
 ## Initialization
 
-Install vagrant from http://downloads.vagrantup.com/
+Install vagrant from http://www.vagrantup.com/downloads.html
 
 ## Invocation
 
