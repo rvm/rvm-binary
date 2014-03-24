@@ -1,13 +1,13 @@
 binaries:
-  - ruby-2.0.0-p353
-  - ruby-2.1.0
+  - ruby-1.9.3-p545
+  - ruby-2.0.0-p451
+  - ruby-2.1.1
 distributions:
   centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
   debian_70_32bit_wheezy: https://rvm.io/vboxes/debian-7.0-i386-netboot.box
   debian_70_64bit_wheezy: https://rvm.io/vboxes/debian-7.0-amd64-netboot.box
   debian_8_64bit_jessie: http://rvm.io/vboxes/debian_8_jessie_64bit.box
-  fedora_18_64bit: http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210.box
   fedora_19_64bit: https://rvm.io/vboxes/fedora-19-x86_64.box
   opensuse_123_64bit: https://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
