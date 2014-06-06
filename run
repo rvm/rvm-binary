@@ -43,7 +43,7 @@ end
 targets.each do |target|
   puts "#### starting #{target}"
   File.delete "log/#{target}.log" if File.exist?("log/#{target}.log")
-  system "vagrant up #{target} 2>&1 | tee log/#{target}.log"
+  system "vagrant up #{target} --provision 2>&1 | tee log/#{target}.log"
   puts "#### stopping #{target}"
   system "vagrant halt #{target} 2>/dev/null || vagrant halt --force #{target}"
 end
