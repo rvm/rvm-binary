@@ -13,6 +13,7 @@ else
   curl -L https://get.rvm.io | bash -s -- "${installer_options[@]}"
 fi
 
+rm -rf /usr/local/rvm/user/*
 /usr/local/rvm/bin/rvm gemset globalcache enable
 
 for type in archives repos gems/cache
