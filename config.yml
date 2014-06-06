@@ -1,7 +1,7 @@
 binaries:
-  - ruby-1.9.3-p545
-  - ruby-2.0.0-p451
-  - ruby-2.1.1
+  - ruby-1.9.3-p547
+  - ruby-2.0.0-p481
+  - ruby-2.1.2
 distributions:
   centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
@@ -9,6 +9,7 @@ distributions:
   debian_70_64bit_wheezy: https://rvm.io/vboxes/debian-7.0-amd64-netboot.box
   debian_8_64bit_jessie: http://rvm.io/vboxes/debian_8_jessie_64bit.box
   fedora_19_64bit: https://rvm.io/vboxes/fedora-19-x86_64.box
+  fedora_20_64bit: https://dl.dropboxusercontent.com/u/15733306/vagrant/fedora-20-netinst-2014_01_05-minimal-puppet-guestadditions.box
   opensuse_123_64bit: https://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
@@ -18,6 +19,7 @@ distributions:
   ubuntu_1304_32bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-i386-vagrant-disk1.box
   ubuntu_1304_64bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box
   ubuntu_1310_64bit_saucy: http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
+  ubuntu_1404_64bit_trusty: http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 release_links:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
   debian: http://www.debian.org/releases/
