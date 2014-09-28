@@ -15,6 +15,9 @@ elsif %w( list --list -l ).include? ARGV[0]
 elsif %w( binaries --binaries -b ).include? ARGV[0]
   system "find binaries/ -type f | sort"
   exit
+elsif %w( du ).include? ARGV[0]
+  system "find binaries/ -type f | sort | xargs du -h"
+  exit
 elsif %w( upload --upload -u ).include? ARGV[0]
   system "rsync -av --rsh=ssh --progress binaries/ rvm@rvm.io:~/site/shared/public/binaries/"
   exit
