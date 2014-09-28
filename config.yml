@@ -1,7 +1,6 @@
 binaries:
-  - ruby-1.9.3-p547
-  - ruby-2.0.0-p481
-  - ruby-2.1.2
+  - ruby-2.0.0-p576
+  - ruby-2.1.3
 distributions:
   centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
   centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
@@ -11,6 +10,7 @@ distributions:
   fedora_19_64bit: https://rvm.io/vboxes/fedora-19-x86_64.box
   fedora_20_64bit: https://dl.dropboxusercontent.com/u/15733306/vagrant/fedora-20-netinst-2014_01_05-minimal-puppet-guestadditions.box
   opensuse_123_64bit: https://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
+  opensuse_131_64bit: https://rvm.io/vboxes/opensuse-13.1-x86_64.box
   ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
   ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
