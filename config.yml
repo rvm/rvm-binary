@@ -16,11 +16,8 @@ distributions:
   ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
   ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
   ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
-  ubuntu_1210_64bit_quantal: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
-  ubuntu_1304_32bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-i386-vagrant-disk1.box
-  ubuntu_1304_64bit_raring: http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box
-  ubuntu_1310_64bit_saucy: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.10_chef-provisionerless.box
   ubuntu_1404_64bit_trusty: http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+  ubuntu_1410_64bit_utopic: http://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box
 release_links:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
   debian: http://www.debian.org/releases/
