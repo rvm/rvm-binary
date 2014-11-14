@@ -23,7 +23,7 @@ release_links:
   debian: http://www.debian.org/releases/
   fedora: https://fedoraproject.org/wiki/Releases
   opensuse: http://en.opensuse.org/Lifetime
-  ubuntu: http://releases.ubuntu.com/
+  ubuntu: https://wiki.ubuntu.com/Releases
 image_links:
   - http://www.vagrantbox.es/
   - https://rvm.io/vboxes/
