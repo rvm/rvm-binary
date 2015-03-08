@@ -2,22 +2,25 @@ binaries:
   - ruby-1.9.3-p551
   - ruby-2.0.0-p598
   - ruby-2.1.5
+  - ruby-2.2.0
+  - ruby-2.2.1
 distributions:
-  centos_59_64bit: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
-  centos_64_64bit: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
-  debian_70_32bit_wheezy: https://rvm_io.global.ssl.fastly.net/vboxes/debian-7.0-i386-netboot.box
-  debian_70_64bit_wheezy: https://rvm_io.global.ssl.fastly.net/vboxes/debian-7.0-amd64-netboot.box
-  debian_8_64bit_jessie: https://rvm_io.global.ssl.fastly.net/vboxes/debian_8_jessie_64bit.box
-  fedora_19_64bit: https://rvm_io.global.ssl.fastly.net/vboxes/fedora-19-x86_64.box
-  fedora_20_64bit: https://dl.dropboxusercontent.com/u/15733306/vagrant/fedora-20-netinst-2014_01_05-minimal-puppet-guestadditions.box
-  opensuse_123_64bit: https://rvm_io.global.ssl.fastly.net/vboxes/opensuse-12.3-NET-x86_64.box
-  opensuse_131_64bit: https://rvm_io.global.ssl.fastly.net/vboxes/opensuse-13.1-x86_64.box
-  ubuntu_1004_32bit_lucid: http://files.vagrantup.com/lucid32.box
-  ubuntu_1004_64bit_lucid: http://files.vagrantup.com/lucid64.box
-  ubuntu_1204_32bit_precise: http://files.vagrantup.com/precise32.box
-  ubuntu_1204_64bit_precise: http://files.vagrantup.com/precise64.box
-  ubuntu_1404_64bit_trusty: http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
-  ubuntu_1410_64bit_utopic: http://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box
+  centos_59_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos59/versions/1.0.10/providers/virtualbox.box
+  centos_64_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos64/versions/1.0.10/providers/virtualbox.box
+  debian_77_32bit_wheezy: https://atlas.hashicorp.com/boxcutter/boxes/debian77-i386/versions/1.0.9/providers/virtualbox.box
+  debian_77_64bit_wheezy: https://vagrantcloud.com/boxcutter/boxes/debian77/versions/1.0.9/providers/virtualbox.box
+  debian_8_64bit_jessie: http://rvm.io/vboxes/debian_8_jessie_64bit.box
+  fedora_19_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora19/versions/1.0.10/providers/virtualbox.box
+  fedora_20_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora20/versions/1.0.10/providers/virtualbox.box
+  fedora_21_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora21/versions/1.0.10/providers/virtualbox.box
+  opensuse_123_64bit: http://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
+  opensuse_131_64bit: http://rvm.io/vboxes/opensuse-13.1-x86_64.box
+  ubuntu_1004_32bit_lucid: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004-i386/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1004_64bit_lucid: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1204_32bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204-i386/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1204_64bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1404_64bit_trusty: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1410_64bit_utopic: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1410/versions/1.0.12/providers/virtualbox.box
 release_links:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
   debian: http://www.debian.org/releases/
