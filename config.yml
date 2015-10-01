@@ -1,9 +1,9 @@
 binaries:
   - ruby-1.9.3-p551
-  - ruby-2.0.0-p598
-  - ruby-2.1.5
-  - ruby-2.2.0
-  - ruby-2.2.1
+  - ruby-2.0.0-p648
+  - ruby-2.1.8
+  - ruby-2.2.4
+  - ruby-2.3.0
 distributions:
   centos_59_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos59/versions/1.0.10/providers/virtualbox.box
   centos_64_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos64/versions/1.0.10/providers/virtualbox.box
