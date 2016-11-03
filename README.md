@@ -2,9 +2,31 @@
 
 Automation of building binary rubies for RVM.
 
-## Initialization
+Included virtual machines are also helpful in manually testing and debugging RVM behaviour on different environments.
 
-Install vagrant from http://www.vagrantup.com/downloads.html
+## Installation
+
+### Requirements
+
+This setup can run on any version of Linux, macOS or Windows supported by the tools listed below:
+
+* [Vagrant](http://www.vagrantup.com/downloads.html)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (free) or VMware Fusion/Workstation (commercial)
+
+If you don't have above tools already installed you should start from installing them manually or follow step by step instruction below.  
+
+### macOS with Homebrew
+
+```
+brew cask install virtualbox
+brew cask install vagrant
+```
+
+Additionally you might want to install [Vagrant Manager](http://vagrantmanager.com/), which helps you manage all your virtual machines in one place directly from the menubar.
+
+```
+brew cask install vagrant-manager
+```
 
 ## Invocation
 
