@@ -1,5 +1,6 @@
+.idea/
 binaries
-rvm-*
-.vagrant
-Gemfile.lock
 log/
+.vagrant
+rvm-*
+Gemfile.lock
