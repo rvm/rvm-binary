@@ -19,8 +19,10 @@ distributions:
   ubuntu_1004_64bit_lucid: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004/versions/1.0.12/providers/virtualbox.box
   ubuntu_1204_32bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204-i386/versions/1.0.12/providers/virtualbox.box
   ubuntu_1204_64bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1404_64bit_trusty: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1410_64bit_utopic: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1410/versions/1.0.12/providers/virtualbox.box
+  ubuntu_1404_64bit_trusty: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404/versions/2.0.26/providers/virtualbox.box
+  ubuntu_1410_64bit_utopic: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1410/versions/2.0.26/providers/virtualbox.box
+  ubuntu_1510_64bit_willy: https://atlas.hashicorp.com/ubuntu/boxes/wily64/versions/20160715.0.0/providers/virtualbox.box
+  ubuntu_1604_64bit_xenial: https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20161221.0.0/providers/virtualbox.box
 release_links:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
   debian: http://www.debian.org/releases/
