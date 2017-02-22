@@ -31,6 +31,14 @@ then
   sed -E -i'' -e 's/(Defaults\s+requiretty)/#\1/' /etc/sudoers
 fi
 
+# Oracle
+if
+  [[ -f /etc/os-release ]] &&
+  GREP_OPTIONS="" \grep 'ID="ol"' /etc/os-release >/dev/null
+then
+  yum install libyaml-devel -y --enablerepo ol7_optional_latest
+fi
+
 groups vagrant | grep rvm >/dev/null ||
   /usr/sbin/usermod -a -G rvm vagrant
 
