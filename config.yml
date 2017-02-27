@@ -25,6 +25,7 @@ distributions:
   ubuntu_1510_64bit_willy: https://atlas.hashicorp.com/ubuntu/boxes/wily64/versions/20160715.0.0/providers/virtualbox.box
   ubuntu_1604_64bit_xenial: https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20161221.0.0/providers/virtualbox.box
   ubuntu_1610_64bit_yakkety: https://atlas.hashicorp.com/ubuntu/boxes/yakkety64/versions/20170207.0.0/providers/virtualbox.box
+  oracle_72_64bit: https://atlas.hashicorp.com/boxcutter/boxes/ol72/versions/3.0.9/providers/virtualbox.box
 
 release_links:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
