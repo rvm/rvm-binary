@@ -7,6 +7,7 @@ binaries:
 distributions:
   centos_59_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos59/versions/1.0.10/providers/virtualbox.box
   centos_64_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos64/versions/1.0.10/providers/virtualbox.box
+  centos_73_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos73/versions/2.0.21/providers/virtualbox.box
   debian_77_32bit_wheezy: https://atlas.hashicorp.com/boxcutter/boxes/debian77-i386/versions/1.0.9/providers/virtualbox.box
   debian_77_64bit_wheezy: https://vagrantcloud.com/boxcutter/boxes/debian77/versions/1.0.9/providers/virtualbox.box
   debian_8_64bit_jessie: http://rvm.io/vboxes/debian_8_jessie_64bit.box
