@@ -1,58 +1,23 @@
 #!/usr/bin/env ruby
 
-require 'yaml'
+require 'thor'
 
-distributions = YAML::load_file('config.yml')["distributions"]
-
-if ARGV.nil? || ARGV.length == 0 || ARGV[0] == "all"
-  targets = distributions.keys
-elsif %w( help --help -h ).include? ARGV[0]
-  puts "Usage: ./run [help|list|<image>|binaries|upload]"
-  exit
-elsif %w( list --list -l ).include? ARGV[0]
-  puts distributions.keys
-  exit
-elsif %w( binaries --binaries -b ).include? ARGV[0]
-  system "find binaries/ -type f | sort"
-  exit
-elsif %w( du ).include? ARGV[0]
-  system "find binaries/ -type f | sort | xargs du -h"
-  exit
-elsif %w( upload --upload -u ).include? ARGV[0]
-  system "rsync -av --rsh=ssh --progress binaries/ rvm@rvm.io:~/site/shared/public/binaries/"
-  exit
-else
-  targets = ARGV
+class RVMBinary < Thor
+  desc 'list', 'List available resources: virtual machines, binary builds or branches to test'
+  # method_option :vm, aliases: 'os', desc: 'list available virtual machines'
+  # method_option :binary, desc: 'list build binaries'
+  # method_option :branch, desc: 'list available branches for testing'
+  def list(resource)
+    puts "#{resouce}"
+  end
 end
 
-if ( targets - distributions.keys ).length > 0
-  $stderr.puts "Unknown command '#{ARGV*" "}'"
-  puts "Usage: ./run [image]"
-  exit 1
-end
+RVMBinary.start
 
-if targets.length == 1
-  puts "#### halting #{targets[0]}"
-  system "vagrant halt #{targets[0]} || vagrant halt --force #{targets[0]}"
-elsif targets.length > 1
-  puts "### halting all"
-  system "vagrant halt || vagrant halt --force"
-end
-
-%w( log rvm-archives rvm-repos ).each do |dir|
-  Dir.mkdir "#{dir}/" unless Dir.exist? "#{dir}/"
-end
-
-targets.each do |target|
-  puts "#### starting #{target}"
-  File.delete "log/#{target}.log" if File.exist?("log/#{target}.log")
-  system "vagrant up #{target} --provision 2>&1 | tee log/#{target}.log"
-  puts "#### stopping #{target}"
-  system "vagrant halt #{target} 2>/dev/null || vagrant halt --force #{target}"
-end
-
-if targets.length > 1
-  puts "### halting all"
-  system "vagrant halt || vagrant halt --force"
-  puts "### halted all"
-end
+# TODO
+# ./run build $VERSION $OS1 $OS2 $OS3 ...
+# ./run build $VERSION
+# ./run test $BRANCH $OS
+# ./run list (vm|binaries|branches)
+# ./run upload
+# ./run ssh $OS
