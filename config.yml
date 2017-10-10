@@ -5,34 +5,55 @@ binaries:
   - ruby-2.2.4
   - ruby-2.3.0
 distributions:
-  centos_59_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos59/versions/1.0.10/providers/virtualbox.box
-  centos_64_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos64/versions/1.0.10/providers/virtualbox.box
-  centos_73_64bit: https://atlas.hashicorp.com/boxcutter/boxes/centos73/versions/2.0.21/providers/virtualbox.box
-  debian_77_32bit_wheezy: https://atlas.hashicorp.com/boxcutter/boxes/debian77-i386/versions/1.0.9/providers/virtualbox.box
-  debian_77_64bit_wheezy: https://vagrantcloud.com/boxcutter/boxes/debian77/versions/1.0.9/providers/virtualbox.box
-  debian_8_64bit_jessie: http://rvm.io/vboxes/debian_8_jessie_64bit.box
-  fedora_19_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora19/versions/1.0.10/providers/virtualbox.box
-  fedora_20_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora20/versions/1.0.10/providers/virtualbox.box
-  fedora_21_64bit: https://atlas.hashicorp.com/boxcutter/boxes/fedora21/versions/1.0.10/providers/virtualbox.box
-  opensuse_123_64bit: http://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
-  opensuse_131_64bit: http://rvm.io/vboxes/opensuse-13.1-x86_64.box
-  ubuntu_1004_32bit_lucid: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004-i386/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1004_64bit_lucid: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1204_32bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204-i386/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1204_64bit_precise: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1204/versions/1.0.12/providers/virtualbox.box
-  ubuntu_1404_64bit_trusty: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404/versions/2.0.26/providers/virtualbox.box
-  ubuntu_1410_64bit_utopic: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1410/versions/2.0.26/providers/virtualbox.box
-  ubuntu_1510_64bit_willy: https://atlas.hashicorp.com/ubuntu/boxes/wily64/versions/20160715.0.0/providers/virtualbox.box
-  ubuntu_1604_64bit_xenial: https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20161221.0.0/providers/virtualbox.box
-  ubuntu_1610_64bit_yakkety: https://atlas.hashicorp.com/ubuntu/boxes/yakkety64/versions/20170207.0.0/providers/virtualbox.box
-
-release_links:
+  centos-5: boxcutter/centos5
+  centos-6: centos/6
+  centos-7: centos/7
+  debian-7-32: https://atlas.hashicorp.com/boxcutter/boxes/debian77-i386/versions/1.0.9/providers/virtualbox.box
+  debian-7-64: debian/wheezy64
+  debian-8: debian/jessie64
+  debian-9: debian/stretch64
+  debian-10: fujimakishouten/debian-buster64
+  fedora-19: https://atlas.hashicorp.com/boxcutter/boxes/fedora19/versions/1.0.10/providers/virtualbox.box
+  fedora-20: https://atlas.hashicorp.com/boxcutter/boxes/fedora20/versions/1.0.10/providers/virtualbox.box
+  fedora-21: https://atlas.hashicorp.com/boxcutter/boxes/fedora21/versions/1.0.10/providers/virtualbox.box
+  fedora-23: fedora/23-cloud-base
+  fedora-24: fedora/24-cloud-base
+  fedora-25: fedora/25-cloud-base
+  fedora-26: fedora/26-cloud-base
+  opensuse-12.3: http://rvm.io/vboxes/opensuse-12.3-NET-x86_64.box
+  opensuse-13.1: opensuse/openSUSE-13.1-x86_64
+  opensuse-13.2: opensuse/openSUSE-13.2-x86_64
+  opensuse-42.1: opensuse/openSUSE-42.1-x86_64
+  opensuse-42.2: opensuse/openSUSE-42.2-x86_64
+  opensuse-42.3: opensuse/openSUSE-42.3-x86_64
+  opensuse-latest: opensuse/openSUSE-Tumbleweed-x86_64
+  ubuntu-10.04-32: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004-i386/versions/1.0.12/providers/virtualbox.box
+  ubuntu-10.04-64: https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1004/versions/1.0.12/providers/virtualbox.box
+  ubuntu-12.04-32: ubuntu/precise32
+  ubuntu-12.04-64: ubuntu/precise64
+  ubuntu_14.04-32: ubuntu/trusty32
+  ubuntu_14.04-64: ubuntu/trusty64
+  ubuntu_14.10-32: larryli/utopic32
+  ubuntu_14.10-64: larryli/utopic64
+  ubuntu_15.04-32: larryli/vivid32
+  ubuntu_15.04-64: larryli/vivid64
+  ubuntu_15.10-32: ubuntu/wily32
+  ubuntu_15.10-64: ubuntu/wily64
+  ubuntu-16.04-32: ubuntu/xenial32
+  ubuntu-16.04-32: ubuntu/xenial64
+  ubuntu_16.10-32: ubuntu/yakkety32
+  ubuntu_16.10-64: ubuntu/yakkety64
+  ubuntu-17.04-32: ubuntu/zesty32
+  ubuntu-17.04-64: ubuntu/zesty64
+  ubuntu-17.10-32: ubuntu/artful32
+  ubuntu-17.10-64: ubuntu/artful64
+releases:
   centos: http://en.wikipedia.org/wiki/CentOS#CentOS_releases
   debian: http://www.debian.org/releases/
   fedora: https://fedoraproject.org/wiki/Releases
   opensuse: http://en.opensuse.org/Lifetime
   ubuntu: https://wiki.ubuntu.com/Releases
 image_links:
-  - http://www.vagrantbox.es/
+  - https://app.vagrantup.com
   - https://rvm_io.global.ssl.fastly.net/vboxes/
-  - http://cloud-images.ubuntu.com/vagrant/
+  - http://www.vagrantbox.es
