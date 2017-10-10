@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+libdir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+
+require 'rvmbinary'
+
+RVMBinary::CLI.start(ARGV)
+
+# TODO
+# ./run build $VERSION $OS1 $OS2 $OS3 ...
+# ./run build $VERSION
+# ./run test $BRANCH $OS
+# ./run list (vm|binaries|branches)
+# ./run upload
+# ./run ssh $OS
