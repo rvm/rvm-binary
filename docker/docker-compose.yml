@@ -1,0 +1,9 @@
+version: '3'
+services:
+  rvm:
+    image: ${REPOSITORY_URL}rvm-${PLATFORM}:${TAG}
+    build:
+      context: .
+      args:
+        - platform=${PLATFORM}
+        - tag=${TAG}

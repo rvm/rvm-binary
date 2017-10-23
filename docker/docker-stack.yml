@@ -1,0 +1,12 @@
+version: '3'
+services:
+  rvm:
+    image: ${REPOSITORY_URL}rvm-${PLATFORM}:${TAG}
+    environment:
+      - RUBY_VERSION=${RUBY_VERSION}
+    volumes:
+      - ${ARTIFACTS_DIR:-.}:/ruby-binaries
+    deploy:
+      restart_policy:
+        condition: on-failure
+
