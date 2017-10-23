@@ -2,7 +2,7 @@
 
 set -e
 
-source environment.sh
+source config/environment.sh
 
 # read all platforms
 while read platform; do
