@@ -10,7 +10,7 @@
 # If the registry requires login, you should login on each node using docker login
 # If you have a free account on Docker Hub, you can simply push the images there
 # but they will be public. In such case, just put your username
-# Note that in call cases the trailing slash is required
+# Note that in all cases the trailing slash is required
 #export REPOSITORY_URL=PUT_IP_HERE:8000/
 
 # Set this to a remote docker engine IP
